@@ -32,11 +32,9 @@ def transform_file(filename) -> str:
 
     gTTS_tool.save(output_filename)
 
-    #os.remove("test.mp3")
+    os.remove(filename)
 
-    #os.remove(filename)
-
-    return filename
+    return output_filename
 
 
 @app.route("/pdf", methods=["POST"])
@@ -56,4 +54,4 @@ def pdf_upload():
     return send_file(output_filename, as_attachment=True, download_name=output_filename), 201
 
 if __name__ == '__main__':
-    app.run(port=8002, debug=True)
+    app.run(port=8003, debug=True)

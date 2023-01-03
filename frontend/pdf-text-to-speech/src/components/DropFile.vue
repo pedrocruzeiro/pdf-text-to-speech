@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <div>
-      <h2>Single File</h2>
+      <h2>Please submit a valid pdf file</h2>
       <hr/>
       <label>File
         <input type="file" @change="handleFileUpload( $event )"/>
